@@ -1,0 +1,26 @@
+trigger : none
+
+pool:
+  vmImage: 'ubuntu-16.04'
+
+stages:
+-stage: firststage
+ jobs:
+   -job: firstjob
+    strategy:
+      maxParallel: 0
+      matrix:
+        JOB1:
+          Version: 1.0
+          AppName: ap
+        JOB2:
+          Version: 2.0
+          AppName: tn
+        JOB3:
+          Version: 3.0
+          AppName: aptn
+    steps:
+    -script:
+      echo "$(Version)"
+      echo "$(AppName)"
+     displayName: "Echo Variables"
