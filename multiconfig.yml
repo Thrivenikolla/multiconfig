@@ -12,13 +12,13 @@ stages:
       matrix:
         JOB1:
           Version: 1.0
-          AppName: ap
+          AppName: google
         JOB2:
           Version: 2.0
-          AppName: tn
+          AppName: edge
         JOB3:
           Version: 3.0
-          AppName: aptn
+          AppName: safari
     steps:
     -script:
       echo "$(Version)"
